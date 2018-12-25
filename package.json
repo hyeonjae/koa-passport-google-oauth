@@ -1,0 +1,30 @@
+{
+  "name": "koa-passport-google-oauth",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "node app.js",
+    "debug": "node --nolazy --inspect-brk=9229 app.js"
+  },
+  "dependencies": {
+    "debug": "~2.6.8",
+    "dotenv": "^6.2.0",
+    "jade": "~1.11.0",
+    "koa": "^2.3.0",
+    "koa-bodyparser": "^4.2.0",
+    "koa-convert": "^1.2.0",
+    "koa-json": "^2.0.2",
+    "koa-logger": "^3.0.0",
+    "koa-onerror": "^3.1.0",
+    "koa-passport": "^4.1.1",
+    "koa-router": "^7.2.1",
+    "koa-session": "^5.10.1",
+    "koa-static": "^3.0.0",
+    "koa-views": "^6.0.2",
+    "passport-google-auth": "^1.0.2"
+  },
+  "devDependencies": {
+    "babel-eslint": "7.1.1",
+    "eslint": "3.18.0"
+  }
+}
