@@ -4,7 +4,10 @@
   "private": true,
   "scripts": {
     "start": "node app.js",
-    "debug": "node --nolazy --inspect-brk=9229 app.js"
+    "debug": "node --nolazy --inspect-brk=9229 app.js",
+    "client": "cd client && yarn start",
+    "server": "nodemon app.js",
+    "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\""
   },
   "dependencies": {
     "debug": "~2.6.8",
@@ -24,7 +27,7 @@
     "passport-google-auth": "^1.0.2"
   },
   "devDependencies": {
-    "babel-eslint": "7.1.1",
-    "eslint": "3.18.0"
+    "concurrently": "^4.1.0",
+    "nodemon": "^1.18.9"
   }
 }
