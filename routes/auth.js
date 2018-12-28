@@ -16,7 +16,9 @@ router.get('/google/callback',
 )
 
 router.get('/authenticated', authenticated(), async (ctx, next) => {
-	ctx.body = { msg: 'Authenticated', user: ctx.state.user }
+  // ctx.body = { msg: 'Authenticated', user: ctx.state.user }
+  ctx.status = 302;
+  ctx.redirect('http://localhost:3000/');
 })
 
 module.exports = router
