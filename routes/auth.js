@@ -4,9 +4,7 @@ const { authenticated } = require('../auth')
 
 const router = new Router()
 
-router.get('/google',
-  passport.authenticate('google')
-)
+router.get('/google', passport.authenticate('google'));
 
 router.get('/google/callback',
   passport.authenticate('google', {

@@ -3,11 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "node app.js",
-    "debug": "node --nolazy --inspect-brk=9229 app.js",
-    "client": "cd client && yarn start",
     "server": "nodemon app.js",
-    "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\""
+    "server:debug": "node --nolazy --inspect-brk=9229 app.js",
+    "client": "cd client && yarn start",
+    "material-ui": "cd material-ui && yarn start",
+    "dev:client": "concurrently --kill-others-on-fail \"yarn server\" \"yarn material-ui\"",
+    "dev:material-ui": "concurrently --kill-others-on-fail \"yarn server\" \"yarn material-ui\""
   },
   "dependencies": {
     "debug": "~2.6.8",
